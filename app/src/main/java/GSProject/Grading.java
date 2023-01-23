@@ -29,40 +29,62 @@ public class Grading extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
         matricInput = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        matricsTxt = new javax.swing.JLabel();
         addData = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         displayTable = new javax.swing.JTable();
         c1CarryMark = new javax.swing.JTextField();
         c1Lbl = new javax.swing.JLabel();
         c1FinalMark = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        cm465 = new javax.swing.JLabel();
+        f465 = new javax.swing.JLabel();
         c2FinalMark = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        cm501 = new javax.swing.JLabel();
+        f501 = new javax.swing.JLabel();
         c2CarryMark = new javax.swing.JTextField();
         c2Lbl = new javax.swing.JLabel();
         c3FinalMark = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        cm500 = new javax.swing.JLabel();
+        f500 = new javax.swing.JLabel();
         c3CarryMark = new javax.swing.JTextField();
         c3Lbl = new javax.swing.JLabel();
         c4FinalMark = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        cm554 = new javax.swing.JLabel();
+        f554 = new javax.swing.JLabel();
         c4CarryMark = new javax.swing.JTextField();
         c4Lbl = new javax.swing.JLabel();
         c5FinalMark = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        cmict500 = new javax.swing.JLabel();
+        fict500 = new javax.swing.JLabel();
         c5CarryMark = new javax.swing.JTextField();
-        c5Lbl = new javax.swing.JLabel();
+        classTxt = new javax.swing.JLabel();
+        c5Lbl1 = new javax.swing.JLabel();
+        but_3a = new javax.swing.JRadioButton();
+        but_3b = new javax.swing.JRadioButton();
+        but_3c = new javax.swing.JRadioButton();
+        but_3d = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 51, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
         setSize(new java.awt.Dimension(64, 23));
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 51));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         matricInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +92,7 @@ public class Grading extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Matric Number :");
+        matricsTxt.setText("Matric Number :");
 
         addData.setText("Add");
         addData.addActionListener(new java.awt.event.ActionListener() {
@@ -84,14 +106,14 @@ public class Grading extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No. Matric", "C1 GPA", "C2 GPA", "C3 GPA", "C4 GPA", "C5 GPA", "CGPA"
+                "No. Matric", "CLASS", "C1 GPA", "C2 GPA", "C3 GPA", "C4 GPA", "C5 GPA", "CGPA"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                true, true, true, true, true, true, false
+                true, true, true, true, true, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -113,29 +135,26 @@ public class Grading extends javax.swing.JFrame {
         c1Lbl.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         c1Lbl.setText("CSC 465");
 
-        c1FinalMark.setSize(new java.awt.Dimension(64, 23));
         c1FinalMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c1FinalMarkActionPerformed(evt);
             }
         });
 
-        jLabel10.setText("Carry Mark :");
+        cm465.setText("Carry Mark :");
 
-        jLabel11.setText("Final/ Test Mark :");
+        f465.setText("Final/ Test Mark :");
 
-        c2FinalMark.setSize(new java.awt.Dimension(64, 23));
         c2FinalMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c2FinalMarkActionPerformed(evt);
             }
         });
 
-        jLabel12.setText("Carry Mark :");
+        cm501.setText("Carry Mark :");
 
-        jLabel13.setText("Final/ Test Mark :");
+        f501.setText("Final/ Test Mark :");
 
-        c2CarryMark.setSize(new java.awt.Dimension(64, 23));
         c2CarryMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c2CarryMarkActionPerformed(evt);
@@ -145,18 +164,16 @@ public class Grading extends javax.swing.JFrame {
         c2Lbl.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         c2Lbl.setText("ISP 501");
 
-        c3FinalMark.setSize(new java.awt.Dimension(64, 23));
         c3FinalMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c3FinalMarkActionPerformed(evt);
             }
         });
 
-        jLabel15.setText("Carry Mark :");
+        cm500.setText("Carry Mark :");
 
-        jLabel16.setText("Final/ Test Mark :");
+        f500.setText("Final/ Test Mark :");
 
-        c3CarryMark.setSize(new java.awt.Dimension(64, 23));
         c3CarryMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c3CarryMarkActionPerformed(evt);
@@ -166,18 +183,16 @@ public class Grading extends javax.swing.JFrame {
         c3Lbl.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         c3Lbl.setText("ISP 500");
 
-        c4FinalMark.setSize(new java.awt.Dimension(64, 23));
         c4FinalMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c4FinalMarkActionPerformed(evt);
             }
         });
 
-        jLabel18.setText("Carry Mark :");
+        cm554.setText("Carry Mark :");
 
-        jLabel19.setText("Final/ Test Mark :");
+        f554.setText("Final/ Test Mark :");
 
-        c4CarryMark.setSize(new java.awt.Dimension(64, 23));
         c4CarryMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c4CarryMarkActionPerformed(evt);
@@ -187,156 +202,197 @@ public class Grading extends javax.swing.JFrame {
         c4Lbl.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         c4Lbl.setText("CTU 554");
 
-        c5FinalMark.setSize(new java.awt.Dimension(64, 23));
         c5FinalMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c5FinalMarkActionPerformed(evt);
             }
         });
 
-        jLabel21.setText("Carry Mark :");
+        cmict500.setText("Carry Mark :");
 
-        jLabel22.setText("Final/ Test Mark :");
+        fict500.setText("Final/ Test Mark :");
 
-        c5CarryMark.setSize(new java.awt.Dimension(64, 23));
         c5CarryMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c5CarryMarkActionPerformed(evt);
             }
         });
 
-        c5Lbl.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        c5Lbl.setText("ICT 500");
+        classTxt.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        classTxt.setText("Class");
+
+        c5Lbl1.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        c5Lbl1.setText("ICT 500");
+
+        buttonGroup1.add(but_3a);
+        but_3a.setText("CS2663A");
+        but_3a.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                but_3aActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(but_3b);
+        but_3b.setText("CS2663B");
+
+        buttonGroup1.add(but_3c);
+        but_3c.setText("CS2663C");
+
+        buttonGroup1.add(but_3d);
+        but_3d.setText("CS2663D");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(addData)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 20, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(cm500))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cm554)
+                                            .addComponent(cmict500))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(c1CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(c1FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(matricInput, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(c1Lbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(280, 280, 280)
-                        .addComponent(c3FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(c5CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(c4CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(c3CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(c5Lbl, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(c3Lbl)
-                                        .addComponent(c4Lbl, javax.swing.GroupLayout.Alignment.LEADING)))
-                                .addGap(70, 70, 70))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel15)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(c3CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel16))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel18)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(c4CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel19)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(c4FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel21)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(c5CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel22)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(c5FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addComponent(c2Lbl)
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cm465)
+                                    .addComponent(cm501)
+                                    .addComponent(c1Lbl)
+                                    .addComponent(c3Lbl)
+                                    .addComponent(c4Lbl)
+                                    .addComponent(c5Lbl1)
+                                    .addComponent(c2Lbl))))
+                        .addGap(310, 310, 310)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(c2CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(c2FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(addData)
+                                .addComponent(matricInput, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(matricsTxt)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(c1CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(c2CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(f500)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(c3FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(f501)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(c2FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(f465)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(c1FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(f554)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(c4FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(fict500)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(c5FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(classTxt)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(but_3a, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(but_3b, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(but_3c, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(but_3d, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(107, 107, 107)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(matricsTxt)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(matricInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(c1Lbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(c1CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(c1FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(c2Lbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(c2CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(c2FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(c1FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(f465))
+                                .addGap(33, 33, 33)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(c2FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(f501)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cm465)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(c2Lbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cm501))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(c1CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33)
+                                .addComponent(c2CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(c3Lbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c3CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(c3FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16))
+                            .addComponent(cm500)
+                            .addComponent(f500))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(c4Lbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c4CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(c4FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18)
-                            .addComponent(jLabel19))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(c5Lbl)
+                            .addComponent(cm554)
+                            .addComponent(f554))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(c5Lbl1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c5CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(c5FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21)
-                            .addComponent(jLabel22))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(cmict500)
+                            .addComponent(fict500)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(classTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(but_3a)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(but_3b)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(but_3c)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(but_3d))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(addData)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGap(27, 27, 27))
         );
 
         pack();
@@ -348,11 +404,13 @@ public class Grading extends javax.swing.JFrame {
 
     private void addDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDataActionPerformed
         // TODO add your handling code here:
-        double[] gpa = new double[5];
+        double[] gpa = new double[5];   
         
         
 //        Tolong buatkan validation for null or undefined text input
-    
+        if(matricInput.getText().isEmpty()|| c1CarryMark.getText().isEmpty()|| c2CarryMark.getText().isEmpty()|| c3CarryMark.getText().isEmpty() || c4CarryMark.getText().isEmpty() || c5CarryMark.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Some data not key in yet!");
+        }      
 //        Calculate GPA members of 5
         gpa[0] = ((Integer.parseInt(c1CarryMark.getText()) + Integer.parseInt(c1FinalMark.getText())) /100) * 4 ;
         gpa[1] = ((Integer.parseInt(c2CarryMark.getText()) + Integer.parseInt(c2FinalMark.getText())) /100) * 4 ;
@@ -368,8 +426,13 @@ public class Grading extends javax.swing.JFrame {
         
         cgpa = (cgpa/20)*4;
         
-//        radio button code (class) 
-        
+       
+//       radio button code (class) 
+//        this.but_3a = a;
+//        
+//        if(but_3a.isSelected()){
+//            buttonGroup1.equals(gpa)
+//        }
 
 
 
@@ -423,6 +486,10 @@ public class Grading extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_c5CarryMarkActionPerformed
 
+    private void but_3aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_3aActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_but_3aActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -451,7 +518,7 @@ public class Grading extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -463,6 +530,11 @@ public class Grading extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addData;
+    private javax.swing.JRadioButton but_3a;
+    private javax.swing.JRadioButton but_3b;
+    private javax.swing.JRadioButton but_3c;
+    private javax.swing.JRadioButton but_3d;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField c1CarryMark;
     private javax.swing.JTextField c1FinalMark;
     private javax.swing.JLabel c1Lbl;
@@ -477,20 +549,22 @@ public class Grading extends javax.swing.JFrame {
     private javax.swing.JLabel c4Lbl;
     private javax.swing.JTextField c5CarryMark;
     private javax.swing.JTextField c5FinalMark;
-    private javax.swing.JLabel c5Lbl;
+    private javax.swing.JLabel c5Lbl1;
+    private javax.swing.JLabel classTxt;
+    private javax.swing.JLabel cm465;
+    private javax.swing.JLabel cm500;
+    private javax.swing.JLabel cm501;
+    private javax.swing.JLabel cm554;
+    private javax.swing.JLabel cmict500;
     private javax.swing.JTable displayTable;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel f465;
+    private javax.swing.JLabel f500;
+    private javax.swing.JLabel f501;
+    private javax.swing.JLabel f554;
+    private javax.swing.JLabel fict500;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField matricInput;
+    private javax.swing.JLabel matricsTxt;
     // End of variables declaration//GEN-END:variables
 }
