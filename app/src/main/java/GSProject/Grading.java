@@ -93,6 +93,7 @@ public class Grading extends javax.swing.JFrame {
         });
 
         matricsTxt.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        matricsTxt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         matricsTxt.setText("Matric Number :");
 
         addDataBtn.setText("Add");
@@ -471,7 +472,7 @@ public class Grading extends javax.swing.JFrame {
                                 .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(matricInput, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(markPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 559, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(15, 15, 15))
                     .addGroup(sgrPanelLayout.createSequentialGroup()
