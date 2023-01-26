@@ -22,6 +22,14 @@ public class Grading extends javax.swing.JFrame {
     public Grading() {
         initComponents();
     }
+    
+    public String languageRun(){
+        if(languageCb.getSelectedItem() == "Malay")
+            return "Malay";
+        else{
+            return "English";
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -78,6 +86,7 @@ public class Grading extends javax.swing.JFrame {
         clearAllDataBtn = new javax.swing.JButton();
         themeModeBtn = new javax.swing.JToggleButton();
         languageCb = new javax.swing.JComboBox<>();
+        infoLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 255));
@@ -459,6 +468,8 @@ public class Grading extends javax.swing.JFrame {
             }
         });
 
+        infoLbl.setText(" ");
+
         javax.swing.GroupLayout sgrPanelLayout = new javax.swing.GroupLayout(sgrPanel);
         sgrPanel.setLayout(sgrPanelLayout);
         sgrPanelLayout.setHorizontalGroup(
@@ -493,7 +504,9 @@ public class Grading extends javax.swing.JFrame {
                                 .addGroup(sgrPanelLayout.createSequentialGroup()
                                     .addComponent(classPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(infoLbl)))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addComponent(sgrHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -507,17 +520,19 @@ public class Grading extends javax.swing.JFrame {
                     .addComponent(themeModeBtn)
                     .addComponent(languageCb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(matricInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(sgrPanelLayout.createSequentialGroup()
+                        .addComponent(matricInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(markPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(classPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(classPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(39, 39, 39))
                     .addGroup(sgrPanelLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(39, 39, 39)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(infoLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(LogOutBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -551,7 +566,12 @@ public class Grading extends javax.swing.JFrame {
         
 //        Calculate GPA members of 5
         if(matricInput.getText().isEmpty()|| c1CarryMark.getText().isEmpty()|| c2CarryMark.getText().isEmpty()|| c3CarryMark.getText().isEmpty() || c4CarryMark.getText().isEmpty() || c5CarryMark.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Some data not key in yet!");
+            if(languageRun().equals("English")){
+                JOptionPane.showMessageDialog(this, "Some data not key in yet!");
+            }else{
+                JOptionPane.showMessageDialog(this, "Sesetengah data belum dimasukkan lagi!");
+            }
+            
         }else{
         gpa[0] = Integer.parseInt(c1CarryMark.getText()) + Integer.parseInt(c1FinalMark.getText());
         gpa[1] = Integer.parseInt(c2CarryMark.getText()) + Integer.parseInt(c2FinalMark.getText());
@@ -611,6 +631,11 @@ public class Grading extends javax.swing.JFrame {
         String data[] = {matricInput.getText(),butClass ,Double.toString(gpa[0]), Double.toString(gpa[1]), Double.toString(gpa[2]), Double.toString(gpa[3]), Double.toString(gpa[4]), Double.toString(cgpa) };
         DefaultTableModel tblModel = (DefaultTableModel)displayTable.getModel();
         
+        if(languageRun().equals("English")){
+            infoLbl.setText("Data insert successfully!");           
+        }else{
+            infoLbl.setText("Berjaya memasukkan data!");
+        }        
 //        insertion of data           
             tblModel.addRow(data);
         }      
@@ -665,7 +690,7 @@ public class Grading extends javax.swing.JFrame {
 
     private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutBtnActionPerformed
         Login login = new Login();
-        
+        infoLbl.setText(""); 
         login.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_LogOutBtnActionPerformed
@@ -691,14 +716,24 @@ public class Grading extends javax.swing.JFrame {
     private void deleteDataBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteDataBtnActionPerformed
         // TODO add your handling code here:
         DefaultTableModel tblModel = (DefaultTableModel)displayTable.getModel();
-        
+        infoLbl.setText("");           
         if(displayTable.getSelectedRowCount() == 1){
             tblModel.removeRow(displayTable.getSelectedRow());
         }else{
             if(displayTable.getRowCount() == 0){
-                JOptionPane.showMessageDialog(this, "Table is Empty!");
+                if(languageRun().equals("English")){
+                    JOptionPane.showMessageDialog(this, "Table is Empty!");
+                }else{
+                    JOptionPane.showMessageDialog(this, "Jadual Kosong!");
+                }
+               
             }else{
-                JOptionPane.showMessageDialog(this, "Please select single row for delete!");
+                 if(languageRun().equals("English")){
+                    JOptionPane.showMessageDialog(this, "Please select single row for delete!");
+                }else{
+                    JOptionPane.showMessageDialog(this, "Sila pilih satu baris untuk dipadam!");
+                }
+               
             }
         }
     }//GEN-LAST:event_deleteDataBtnActionPerformed
@@ -706,16 +741,24 @@ public class Grading extends javax.swing.JFrame {
     private void clearAllDataBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllDataBtnActionPerformed
         // TODO add your handling code here:
         DefaultTableModel tblModel = (DefaultTableModel)displayTable.getModel();
-        
+        infoLbl.setText(""); 
         int rowsToRemove = displayTable.getRowCount();
          
             if(displayTable.getRowCount() == 0){
-                JOptionPane.showMessageDialog(this, "Table is Empty!");
+                if(languageRun().equals("English")){
+                    JOptionPane.showMessageDialog(this, "Table is Empty!");
+                }else{
+                    JOptionPane.showMessageDialog(this, "Jadual Kosong!");
+                }
             }else{
                 for(int i=0; i < rowsToRemove; i++){
                    tblModel.removeRow(0);
                 }
-                JOptionPane.showMessageDialog(this, "Clear all successful");
+                if(languageRun().equals("English")){
+                    JOptionPane.showMessageDialog(this, "Clear all successful");
+                }else{
+                    JOptionPane.showMessageDialog(this, "Kosongkan semua berjaya");
+                }
             }
 
     }//GEN-LAST:event_clearAllDataBtnActionPerformed
@@ -866,7 +909,9 @@ public class Grading extends javax.swing.JFrame {
 
     private void languageCbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageCbActionPerformed
         // TODO add your handling code here:
-       if(languageCb.getSelectedItem() == "Malay"){
+        System.out.println(languageRun());
+       if(languageRun().equals("Malay")){
+           
            matricsTxt.setText("Nombor Matrik :");
            cm1.setText("Penilaian Berterusan: ");
            cm2.setText("Penilaian Berterusan: ");
@@ -886,7 +931,7 @@ public class Grading extends javax.swing.JFrame {
            LogOutBtn.setText("Log Keluar");
            
            
-       }else if(languageCb.getSelectedItem() == "English"){
+       }else if(languageRun().equals("English")){
            matricsTxt.setText("Matric Number :");
            cm1.setText("Carry Mark: ");
            cm2.setText("Carry Mark: ");
@@ -984,6 +1029,7 @@ public class Grading extends javax.swing.JFrame {
     private javax.swing.JLabel fm3;
     private javax.swing.JLabel fm4;
     private javax.swing.JLabel fm5;
+    private javax.swing.JLabel infoLbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> languageCb;
