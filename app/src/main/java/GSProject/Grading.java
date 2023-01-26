@@ -868,9 +868,43 @@ public class Grading extends javax.swing.JFrame {
         // TODO add your handling code here:
        if(languageCb.getSelectedItem() == "Malay"){
            matricsTxt.setText("Nombor Matrik :");
+           cm1.setText("Penilaian Berterusan: ");
+           cm2.setText("Penilaian Berterusan: ");
+           cm3.setText("Penilaian Berterusan: ");
+           cm4.setText("Penilaian Berterusan: ");
+           cm5.setText("Penilaian Berterusan: ");
+           fm1.setText("Markah Akhir: ");
+           fm2.setText("Markah Akhir: ");
+           fm3.setText("Markah Akhir: ");
+           fm4.setText("Markah Akhir: ");
+           fm5.setText("Markah Akhir: ");
+           classTxt.setText("Kelas");
+           addDataBtn.setText("Tambah");
+           deleteDataBtn.setText("Buang");
+           clearAllDataBtn.setText("Kosongkan Semua");
+           themeModeBtn.setText("Mod Tema");
+           LogOutBtn.setText("Log Keluar");
+           
            
        }else if(languageCb.getSelectedItem() == "English"){
-            matricsTxt.setText("Matric Number :");
+           matricsTxt.setText("Matric Number :");
+           cm1.setText("Carry Mark: ");
+           cm2.setText("Carry Mark: ");
+           cm3.setText("Carry Mark: ");
+           cm4.setText("Carry Mark: ");
+           cm5.setText("Carry Mark: ");
+           fm1.setText("Final/Test Mark: ");
+           fm2.setText("Final/Test Mark: ");
+           fm3.setText("Final/Test Mark: ");
+           fm4.setText("Final/Test Mark: ");
+           fm5.setText("Final/Test Mark: ");
+           classTxt.setText("Class");
+           addDataBtn.setText("Add");
+           deleteDataBtn.setText("Delete");
+           clearAllDataBtn.setText("Clear All");
+           themeModeBtn.setText("Theme Mode");
+           LogOutBtn.setText("Log out");
+           
        }
     }//GEN-LAST:event_languageCbActionPerformed
 
