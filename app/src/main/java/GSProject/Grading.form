@@ -36,17 +36,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="sgrPanel" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="sgrPanel" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="sgrPanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -65,42 +65,54 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="matricInput" alignment="0" min="-2" pref="285" max="-2" attributes="0"/>
                                       <Component id="markPanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="matricsTxt" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="559" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jButton1" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="LogOutBtn" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="addData" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="deleteData" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="clearAllData" min="-2" max="-2" attributes="0"/>
+                                  <Component id="matricsTxt" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="643" max="-2" attributes="0"/>
+                                  <Component id="languageCb" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="themeModeBtn" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="classPanel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" min="-2" pref="514" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="addDataBtn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="deleteDataBtn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="clearAllDataBtn" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="classPanel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="514" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+              <Component id="sgrHeader" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                  <Component id="matricsTxt" min="-2" max="-2" attributes="0"/>
+                  <Component id="sgrHeader" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="matricsTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="themeModeBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="languageCb" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="matricInput" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -111,17 +123,17 @@
                           <Component id="classPanel" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="349" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton1" max="32767" attributes="0"/>
+                      <Component id="LogOutBtn" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="addData" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="deleteData" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="clearAllData" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addDataBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="deleteDataBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clearAllDataBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -143,12 +155,12 @@
             <Property name="text" type="java.lang.String" value="Matric Number :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="addData">
+        <Component class="javax.swing.JButton" name="addDataBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Add"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addDataActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addDataBtnActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -226,12 +238,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="LogOutBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Log out"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LogOutBtnActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="markPanel">
@@ -249,12 +261,12 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cm500" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cm3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cm554" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cmict500" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cm4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cm5" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -267,13 +279,13 @@
                           </Group>
                           <Component id="c3Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="c4Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="c5Lbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="c5Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cm465" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cm1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="c1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="c2Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cm501" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cm2" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -286,30 +298,30 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="f500" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fm3" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="c3FinalMark" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="f501" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fm2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="c2FinalMark" min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="f465" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fm1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="c1FinalMark" min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="f554" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fm4" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="c4FinalMark" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="fict500" min="-2" max="-2" attributes="0"/>
+                              <Component id="fm5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="c5FinalMark" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
@@ -326,17 +338,17 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="c3FinalMark" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="f500" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fm3" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="c4FinalMark" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="f554" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fm4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="c5FinalMark" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fict500" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fm5" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
@@ -345,18 +357,18 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="cm465" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cm1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="c1CarryMark" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="f465" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fm1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="c1FinalMark" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="c2Lbl" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="cm501" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cm2" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="c2CarryMark" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="f501" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fm2" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="c2FinalMark" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -366,21 +378,21 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="c3CarryMark" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cm500" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cm3" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="c4Lbl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="c4CarryMark" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cm554" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cm4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="c5Lbl1" min="-2" max="-2" attributes="0"/>
+                              <Component id="c5Lbl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="c5CarryMark" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cmict500" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cm5" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -390,7 +402,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="f501">
+            <Component class="javax.swing.JLabel" name="fm2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Final/ Test Mark :"/>
               </Properties>
@@ -413,12 +425,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="c3FinalMarkActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="cm500">
+            <Component class="javax.swing.JLabel" name="cm3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Carry Mark :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="f500">
+            <Component class="javax.swing.JLabel" name="fm3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Final/ Test Mark :"/>
               </Properties>
@@ -441,12 +453,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="c4FinalMarkActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="cm554">
+            <Component class="javax.swing.JLabel" name="cm4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Carry Mark :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="f554">
+            <Component class="javax.swing.JLabel" name="fm4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Final/ Test Mark :"/>
               </Properties>
@@ -469,7 +481,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="c5FinalMarkActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="cmict500">
+            <Component class="javax.swing.JLabel" name="cm5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Carry Mark :"/>
               </Properties>
@@ -479,7 +491,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="c1CarryMarkActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="fict500">
+            <Component class="javax.swing.JLabel" name="fm5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Final/ Test Mark :"/>
               </Properties>
@@ -502,12 +514,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="c1FinalMarkActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="cm465">
+            <Component class="javax.swing.JLabel" name="cm1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Carry Mark :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="c5Lbl1">
+            <Component class="javax.swing.JLabel" name="c5Lbl">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="16" style="1"/>
@@ -515,7 +527,7 @@
                 <Property name="text" type="java.lang.String" value="ICT 500"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="f465">
+            <Component class="javax.swing.JLabel" name="fm1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Final/ Test Mark :"/>
               </Properties>
@@ -525,7 +537,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="c2FinalMarkActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="cm501">
+            <Component class="javax.swing.JLabel" name="cm2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Carry Mark :"/>
               </Properties>
@@ -626,7 +638,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="sgrHeader">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f5" green="4f" red="4c" type="rgb"/>
@@ -667,21 +679,45 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="deleteData">
+        <Component class="javax.swing.JButton" name="deleteDataBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Delete"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteDataActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteDataBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="clearAllData">
+        <Component class="javax.swing.JButton" name="clearAllDataBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Clear All"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearAllDataActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearAllDataBtnActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="themeModeBtn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Theme mode"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themeModeBtnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="languageCb">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="2">
+                <StringItem index="0" value="English"/>
+                <StringItem index="1" value="Malay"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="languageCbActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

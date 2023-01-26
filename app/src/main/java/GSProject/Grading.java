@@ -4,8 +4,11 @@
  */
 package GSProject;
 
+import java.awt.Color;
+import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
 
 /**
  *
@@ -30,56 +33,58 @@ public class Grading extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        sgrPanel = new javax.swing.JPanel();
         matricInput = new javax.swing.JTextField();
         matricsTxt = new javax.swing.JLabel();
-        addData = new javax.swing.JButton();
+        addDataBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         displayTable = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        LogOutBtn = new javax.swing.JButton();
         markPanel = new javax.swing.JPanel();
-        f501 = new javax.swing.JLabel();
+        fm2 = new javax.swing.JLabel();
         c2CarryMark = new javax.swing.JTextField();
         c2Lbl = new javax.swing.JLabel();
         c3FinalMark = new javax.swing.JTextField();
-        cm500 = new javax.swing.JLabel();
-        f500 = new javax.swing.JLabel();
+        cm3 = new javax.swing.JLabel();
+        fm3 = new javax.swing.JLabel();
         c3CarryMark = new javax.swing.JTextField();
         c3Lbl = new javax.swing.JLabel();
         c4FinalMark = new javax.swing.JTextField();
-        cm554 = new javax.swing.JLabel();
-        f554 = new javax.swing.JLabel();
+        cm4 = new javax.swing.JLabel();
+        fm4 = new javax.swing.JLabel();
         c4CarryMark = new javax.swing.JTextField();
         c4Lbl = new javax.swing.JLabel();
         c5FinalMark = new javax.swing.JTextField();
-        cmict500 = new javax.swing.JLabel();
+        cm5 = new javax.swing.JLabel();
         c1CarryMark = new javax.swing.JTextField();
-        fict500 = new javax.swing.JLabel();
+        fm5 = new javax.swing.JLabel();
         c1Lbl = new javax.swing.JLabel();
         c5CarryMark = new javax.swing.JTextField();
         c1FinalMark = new javax.swing.JTextField();
-        cm465 = new javax.swing.JLabel();
-        c5Lbl1 = new javax.swing.JLabel();
-        f465 = new javax.swing.JLabel();
+        cm1 = new javax.swing.JLabel();
+        c5Lbl = new javax.swing.JLabel();
+        fm1 = new javax.swing.JLabel();
         c2FinalMark = new javax.swing.JTextField();
-        cm501 = new javax.swing.JLabel();
+        cm2 = new javax.swing.JLabel();
         classPanel = new javax.swing.JPanel();
         classTxt = new javax.swing.JLabel();
         but_3a = new javax.swing.JRadioButton();
         but_3b = new javax.swing.JRadioButton();
         but_3c = new javax.swing.JRadioButton();
         but_3d = new javax.swing.JRadioButton();
-        jPanel2 = new javax.swing.JPanel();
+        sgrHeader = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        deleteData = new javax.swing.JButton();
-        clearAllData = new javax.swing.JButton();
+        deleteDataBtn = new javax.swing.JButton();
+        clearAllDataBtn = new javax.swing.JButton();
+        themeModeBtn = new javax.swing.JToggleButton();
+        languageCb = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setSize(new java.awt.Dimension(64, 23));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        sgrPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         matricInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,10 +95,10 @@ public class Grading extends javax.swing.JFrame {
         matricsTxt.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         matricsTxt.setText("Matric Number :");
 
-        addData.setText("Add");
-        addData.addActionListener(new java.awt.event.ActionListener() {
+        addDataBtn.setText("Add");
+        addDataBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addDataActionPerformed(evt);
+                addDataBtnActionPerformed(evt);
             }
         });
 
@@ -127,16 +132,16 @@ public class Grading extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(displayTable);
 
-        jButton1.setText("Log out");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        LogOutBtn.setText("Log out");
+        LogOutBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                LogOutBtnActionPerformed(evt);
             }
         });
 
         markPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        f501.setText("Final/ Test Mark :");
+        fm2.setText("Final/ Test Mark :");
 
         c2CarryMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,9 +158,9 @@ public class Grading extends javax.swing.JFrame {
             }
         });
 
-        cm500.setText("Carry Mark :");
+        cm3.setText("Carry Mark :");
 
-        f500.setText("Final/ Test Mark :");
+        fm3.setText("Final/ Test Mark :");
 
         c3CarryMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,9 +177,9 @@ public class Grading extends javax.swing.JFrame {
             }
         });
 
-        cm554.setText("Carry Mark :");
+        cm4.setText("Carry Mark :");
 
-        f554.setText("Final/ Test Mark :");
+        fm4.setText("Final/ Test Mark :");
 
         c4CarryMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +196,7 @@ public class Grading extends javax.swing.JFrame {
             }
         });
 
-        cmict500.setText("Carry Mark :");
+        cm5.setText("Carry Mark :");
 
         c1CarryMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,7 +204,7 @@ public class Grading extends javax.swing.JFrame {
             }
         });
 
-        fict500.setText("Final/ Test Mark :");
+        fm5.setText("Final/ Test Mark :");
 
         c1Lbl.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         c1Lbl.setText("CSC 465");
@@ -216,12 +221,12 @@ public class Grading extends javax.swing.JFrame {
             }
         });
 
-        cm465.setText("Carry Mark :");
+        cm1.setText("Carry Mark :");
 
-        c5Lbl1.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        c5Lbl1.setText("ICT 500");
+        c5Lbl.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        c5Lbl.setText("ICT 500");
 
-        f465.setText("Final/ Test Mark :");
+        fm1.setText("Final/ Test Mark :");
 
         c2FinalMark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,7 +234,7 @@ public class Grading extends javax.swing.JFrame {
             }
         });
 
-        cm501.setText("Carry Mark :");
+        cm2.setText("Carry Mark :");
 
         javax.swing.GroupLayout markPanelLayout = new javax.swing.GroupLayout(markPanel);
         markPanel.setLayout(markPanelLayout);
@@ -240,12 +245,12 @@ public class Grading extends javax.swing.JFrame {
                 .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(markPanelLayout.createSequentialGroup()
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cm500)
+                            .addComponent(cm3)
                             .addGroup(markPanelLayout.createSequentialGroup()
                                 .addGap(3, 3, 3)
                                 .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cm554)
-                                    .addComponent(cmict500))))
+                                    .addComponent(cm4)
+                                    .addComponent(cm5))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(c5CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -253,13 +258,13 @@ public class Grading extends javax.swing.JFrame {
                             .addComponent(c3CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(c3Lbl)
                     .addComponent(c4Lbl)
-                    .addComponent(c5Lbl1)
+                    .addComponent(c5Lbl)
                     .addGroup(markPanelLayout.createSequentialGroup()
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cm465)
+                            .addComponent(cm1)
                             .addComponent(c1Lbl)
                             .addComponent(c2Lbl)
-                            .addComponent(cm501))
+                            .addComponent(cm2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(c1CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -268,24 +273,24 @@ public class Grading extends javax.swing.JFrame {
                 .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(markPanelLayout.createSequentialGroup()
-                            .addComponent(f500)
+                            .addComponent(fm3)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(c3FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, markPanelLayout.createSequentialGroup()
-                                .addComponent(f501)
+                                .addComponent(fm2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(c2FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(markPanelLayout.createSequentialGroup()
-                                .addComponent(f465)
+                                .addComponent(fm1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(c1FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(markPanelLayout.createSequentialGroup()
-                            .addComponent(f554)
+                            .addComponent(fm4)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(c4FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, markPanelLayout.createSequentialGroup()
-                        .addComponent(fict500)
+                        .addComponent(fm5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(c5FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(24, Short.MAX_VALUE))
@@ -298,51 +303,51 @@ public class Grading extends javax.swing.JFrame {
                     .addGroup(markPanelLayout.createSequentialGroup()
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c3FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(f500))
+                            .addComponent(fm3))
                         .addGap(31, 31, 31)
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c4FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(f554))
+                            .addComponent(fm4))
                         .addGap(37, 37, 37)
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c5FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fict500)))
+                            .addComponent(fm5)))
                     .addGroup(markPanelLayout.createSequentialGroup()
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(c1Lbl)
                             .addGroup(markPanelLayout.createSequentialGroup()
                                 .addGap(22, 22, 22)
                                 .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cm465)
+                                    .addComponent(cm1)
                                     .addComponent(c1CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(f465)
+                                    .addComponent(fm1)
                                     .addComponent(c1FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(c2Lbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cm501)
+                                    .addComponent(cm2)
                                     .addComponent(c2CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(f501)
+                                    .addComponent(fm2)
                                     .addComponent(c2FinalMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(8, 8, 8)
                         .addComponent(c3Lbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c3CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cm500))
+                            .addComponent(cm3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(c4Lbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c4CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cm554))
+                            .addComponent(cm4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(c5Lbl1)
+                        .addComponent(c5Lbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(markPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(c5CarryMark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmict500))))
+                            .addComponent(cm5))))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -402,99 +407,122 @@ public class Grading extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel2.setBackground(new java.awt.Color(76, 79, 245));
+        sgrHeader.setBackground(new java.awt.Color(76, 79, 245));
 
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SGR System");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout sgrHeaderLayout = new javax.swing.GroupLayout(sgrHeader);
+        sgrHeader.setLayout(sgrHeaderLayout);
+        sgrHeaderLayout.setHorizontalGroup(
+            sgrHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sgrHeaderLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        sgrHeaderLayout.setVerticalGroup(
+            sgrHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sgrHeaderLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jLabel1)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        deleteData.setText("Delete");
-        deleteData.addActionListener(new java.awt.event.ActionListener() {
+        deleteDataBtn.setText("Delete");
+        deleteDataBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteDataActionPerformed(evt);
+                deleteDataBtnActionPerformed(evt);
             }
         });
 
-        clearAllData.setText("Clear All");
-        clearAllData.addActionListener(new java.awt.event.ActionListener() {
+        clearAllDataBtn.setText("Clear All");
+        clearAllDataBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearAllDataActionPerformed(evt);
+                clearAllDataBtnActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        themeModeBtn.setText("Theme mode");
+        themeModeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                themeModeBtnActionPerformed(evt);
+            }
+        });
+
+        languageCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "Malay" }));
+        languageCb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                languageCbActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout sgrPanelLayout = new javax.swing.GroupLayout(sgrPanel);
+        sgrPanel.setLayout(sgrPanelLayout);
+        sgrPanelLayout.setHorizontalGroup(
+            sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sgrPanelLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sgrPanelLayout.createSequentialGroup()
+                        .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(sgrPanelLayout.createSequentialGroup()
+                                .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(matricInput, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(markPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(matricsTxt))
+                                    .addComponent(markPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 559, Short.MAX_VALUE))
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(15, 15, 15))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(addData)
-                                .addGap(18, 18, 18)
-                                .addComponent(deleteData)
-                                .addGap(18, 18, 18)
-                                .addComponent(clearAllData))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(classPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(sgrPanelLayout.createSequentialGroup()
+                        .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(sgrPanelLayout.createSequentialGroup()
+                                .addComponent(matricsTxt)
+                                .addGap(643, 643, 643)
+                                .addComponent(languageCb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(themeModeBtn))
+                            .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(sgrPanelLayout.createSequentialGroup()
+                                    .addComponent(addDataBtn)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(deleteDataBtn)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(clearAllDataBtn))
+                                .addGroup(sgrPanelLayout.createSequentialGroup()
+                                    .addComponent(classPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(sgrHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(matricsTxt)
+        sgrPanelLayout.setVerticalGroup(
+            sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sgrPanelLayout.createSequentialGroup()
+                .addComponent(sgrHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(matricsTxt)
+                    .addComponent(themeModeBtn)
+                    .addComponent(languageCb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(matricInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(sgrPanelLayout.createSequentialGroup()
                         .addComponent(markPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(classPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(sgrPanelLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(addData)
-                        .addComponent(deleteData)
-                        .addComponent(clearAllData)))
+                .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(LogOutBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(sgrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(addDataBtn)
+                        .addComponent(deleteDataBtn)
+                        .addComponent(clearAllDataBtn)))
                 .addGap(15, 15, 15))
         );
 
@@ -502,11 +530,11 @@ public class Grading extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(sgrPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(sgrPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -516,7 +544,7 @@ public class Grading extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_matricInputActionPerformed
 
-    private void addDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDataActionPerformed
+    private void addDataBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDataBtnActionPerformed
         // TODO add your handling code here:
         double[] gpa = new double[5];   
         
@@ -589,7 +617,7 @@ public class Grading extends javax.swing.JFrame {
        
         
                 
-    }//GEN-LAST:event_addDataActionPerformed
+    }//GEN-LAST:event_addDataBtnActionPerformed
 
     private void c1CarryMarkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c1CarryMarkActionPerformed
         // TODO add your handling code here:
@@ -635,12 +663,12 @@ public class Grading extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_but_3aActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutBtnActionPerformed
         Login login = new Login();
         
         login.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_LogOutBtnActionPerformed
 
     private void displayTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_displayTableMouseClicked
         // TODO add your handling code here:
@@ -660,7 +688,7 @@ public class Grading extends javax.swing.JFrame {
         
     }//GEN-LAST:event_displayTableMouseClicked
 
-    private void deleteDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteDataActionPerformed
+    private void deleteDataBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteDataBtnActionPerformed
         // TODO add your handling code here:
         DefaultTableModel tblModel = (DefaultTableModel)displayTable.getModel();
         
@@ -673,9 +701,9 @@ public class Grading extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Please select single row for delete!");
             }
         }
-    }//GEN-LAST:event_deleteDataActionPerformed
+    }//GEN-LAST:event_deleteDataBtnActionPerformed
 
-    private void clearAllDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllDataActionPerformed
+    private void clearAllDataBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllDataBtnActionPerformed
         // TODO add your handling code here:
         DefaultTableModel tblModel = (DefaultTableModel)displayTable.getModel();
         
@@ -687,10 +715,164 @@ public class Grading extends javax.swing.JFrame {
                 for(int i=0; i < rowsToRemove; i++){
                    tblModel.removeRow(0);
                 }
-                JOptionPane.showMessageDialog(this, "Clear all successfully");
+                JOptionPane.showMessageDialog(this, "Clear all successful");
             }
 
-    }//GEN-LAST:event_clearAllDataActionPerformed
+    }//GEN-LAST:event_clearAllDataBtnActionPerformed
+
+    private void themeModeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themeModeBtnActionPerformed
+        // TODO add your handling code here:
+         
+        Color color = new Color(15,15,15);
+        if(themeModeBtn.isSelected()){
+            sgrPanel.setBackground(color);
+            themeModeBtn.setBackground(color);
+            themeModeBtn.setForeground(Color.white);          
+            sgrHeader.setBackground(new Color(32,33,36));
+            
+            matricsTxt.setForeground(Color.WHITE);
+            matricInput.setBackground(color);
+            matricInput.setForeground(Color.white);
+            
+            markPanel.setBackground(color);
+            markPanel.setForeground(Color.white);
+            c1Lbl.setForeground(Color.white);
+            c2Lbl.setForeground(Color.white);
+            c3Lbl.setForeground(Color.white);
+            c4Lbl.setForeground(Color.white);
+            c5Lbl.setForeground(Color.white);
+            
+            cm1.setForeground(Color.white);
+            cm2.setForeground(Color.white);
+            cm3.setForeground(Color.white);
+            cm4.setForeground(Color.white);
+            cm5.setForeground(Color.white);
+            
+            fm1.setForeground(Color.white);
+            fm2.setForeground(Color.white);
+            fm3.setForeground(Color.white);
+            fm4.setForeground(Color.white);
+            fm5.setForeground(Color.white);
+            
+            c1CarryMark.setBackground(color);
+            c1CarryMark.setForeground(Color.white);
+            c2CarryMark.setBackground(color);
+            c2CarryMark.setForeground(Color.white);
+            c3CarryMark.setBackground(color);
+            c3CarryMark.setForeground(Color.white);
+            c4CarryMark.setBackground(color);
+            c4CarryMark.setForeground(Color.white);
+            c5CarryMark.setBackground(color);
+            c5CarryMark.setForeground(Color.white);
+            
+            c1FinalMark.setBackground(color);
+            c1FinalMark.setForeground(Color.white);
+            c2FinalMark.setBackground(color);
+            c2FinalMark.setForeground(Color.white);
+            c3FinalMark.setBackground(color);
+            c3FinalMark.setForeground(Color.white);
+            c4FinalMark.setBackground(color);
+            c4FinalMark.setForeground(Color.white);
+            c5FinalMark.setBackground(color);
+            c5FinalMark.setForeground(Color.white);
+            
+            classPanel.setBackground(color);
+            classTxt.setForeground(Color.white);
+            but_3a.setForeground(Color.white);
+            but_3b.setForeground(Color.white);
+            but_3c.setForeground(Color.white);
+            but_3d.setForeground(Color.white);
+            
+            addDataBtn.setBackground(color);
+            addDataBtn.setForeground(Color.white);
+            deleteDataBtn.setBackground(color);
+            deleteDataBtn.setForeground(Color.white);
+            clearAllDataBtn.setBackground(color);
+            clearAllDataBtn.setForeground(Color.white);
+            LogOutBtn.setBackground(color);
+            LogOutBtn.setForeground(Color.white);
+            
+        }else{
+            sgrPanel.setBackground(Color.WHITE);
+            themeModeBtn.setBackground(Color.white);
+            themeModeBtn.setForeground(Color.black);
+             sgrHeader.setBackground(new Color(76,79,245));
+             
+            matricsTxt.setForeground(Color.black);
+            matricInput.setBackground(Color.white);
+            matricInput.setForeground(Color.black);
+            
+            markPanel.setBackground(Color.white);
+            markPanel.setForeground(Color.black);
+            c1Lbl.setForeground(Color.black);
+            c2Lbl.setForeground(Color.black);
+            c3Lbl.setForeground(Color.black);
+            c4Lbl.setForeground(Color.black);
+            c5Lbl.setForeground(Color.black);
+            
+            cm1.setForeground(Color.black);
+            cm2.setForeground(Color.black);
+            cm3.setForeground(Color.black);
+            cm4.setForeground(Color.black);
+            cm5.setForeground(Color.black);
+            
+            fm1.setForeground(Color.black);
+            fm2.setForeground(Color.black);
+            fm3.setForeground(Color.black);
+            fm4.setForeground(Color.black);
+            fm5.setForeground(Color.black);
+            
+            c1CarryMark.setBackground(Color.white);
+            c1CarryMark.setForeground(Color.black);
+            c2CarryMark.setBackground(Color.white);
+            c2CarryMark.setForeground(Color.black);
+            c3CarryMark.setBackground(Color.white);
+            c3CarryMark.setForeground(Color.black);
+            c4CarryMark.setBackground(Color.white);
+            c4CarryMark.setForeground(Color.black);
+            c5CarryMark.setBackground(Color.white);
+            c5CarryMark.setForeground(Color.black);
+            
+            c1FinalMark.setBackground(Color.white);
+            c1FinalMark.setForeground(Color.black);
+            c2FinalMark.setBackground(Color.white);
+            c2FinalMark.setForeground(Color.black);
+            c3FinalMark.setBackground(Color.white);
+            c3FinalMark.setForeground(Color.black);
+            c4FinalMark.setBackground(Color.white);
+            c4FinalMark.setForeground(Color.black);
+            c5FinalMark.setBackground(Color.white);
+            c5FinalMark.setForeground(Color.black);
+            
+            classPanel.setBackground(Color.white);
+            classTxt.setForeground(Color.black);
+            but_3a.setForeground(Color.black);
+            but_3b.setForeground(Color.black);
+            but_3c.setForeground(Color.black);
+            but_3d.setForeground(Color.black);
+            
+            addDataBtn.setBackground(Color.white);
+            addDataBtn.setForeground(Color.black);
+            deleteDataBtn.setBackground(Color.white);
+            deleteDataBtn.setForeground(Color.black);
+            clearAllDataBtn.setBackground(Color.white);
+            clearAllDataBtn.setForeground(Color.black);
+            LogOutBtn.setBackground(Color.white);
+            LogOutBtn.setForeground(Color.black);
+        }
+        
+        
+    }//GEN-LAST:event_themeModeBtnActionPerformed
+
+    private void languageCbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageCbActionPerformed
+        // TODO add your handling code here:
+       if(languageCb.getSelectedItem() == "Malay"){
+           matricsTxt.setText("Nombor Matrik :");
+           
+       }else if(languageCb.getSelectedItem() == "English"){
+            matricsTxt.setText("Matric Number :");
+       }
+    }//GEN-LAST:event_languageCbActionPerformed
 
     /**
      * @param args the command line arguments
@@ -731,7 +913,8 @@ public class Grading extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addData;
+    private javax.swing.JButton LogOutBtn;
+    private javax.swing.JButton addDataBtn;
     private javax.swing.JRadioButton but_3a;
     private javax.swing.JRadioButton but_3b;
     private javax.swing.JRadioButton but_3c;
@@ -751,29 +934,30 @@ public class Grading extends javax.swing.JFrame {
     private javax.swing.JLabel c4Lbl;
     private javax.swing.JTextField c5CarryMark;
     private javax.swing.JTextField c5FinalMark;
-    private javax.swing.JLabel c5Lbl1;
+    private javax.swing.JLabel c5Lbl;
     private javax.swing.JPanel classPanel;
     private javax.swing.JLabel classTxt;
-    private javax.swing.JButton clearAllData;
-    private javax.swing.JLabel cm465;
-    private javax.swing.JLabel cm500;
-    private javax.swing.JLabel cm501;
-    private javax.swing.JLabel cm554;
-    private javax.swing.JLabel cmict500;
-    private javax.swing.JButton deleteData;
+    private javax.swing.JButton clearAllDataBtn;
+    private javax.swing.JLabel cm1;
+    private javax.swing.JLabel cm2;
+    private javax.swing.JLabel cm3;
+    private javax.swing.JLabel cm4;
+    private javax.swing.JLabel cm5;
+    private javax.swing.JButton deleteDataBtn;
     private javax.swing.JTable displayTable;
-    private javax.swing.JLabel f465;
-    private javax.swing.JLabel f500;
-    private javax.swing.JLabel f501;
-    private javax.swing.JLabel f554;
-    private javax.swing.JLabel fict500;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel fm1;
+    private javax.swing.JLabel fm2;
+    private javax.swing.JLabel fm3;
+    private javax.swing.JLabel fm4;
+    private javax.swing.JLabel fm5;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> languageCb;
     private javax.swing.JPanel markPanel;
     private javax.swing.JTextField matricInput;
     private javax.swing.JLabel matricsTxt;
+    private javax.swing.JPanel sgrHeader;
+    private javax.swing.JPanel sgrPanel;
+    private javax.swing.JToggleButton themeModeBtn;
     // End of variables declaration//GEN-END:variables
 }
