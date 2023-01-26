@@ -549,6 +549,9 @@ public class Grading extends javax.swing.JFrame {
         double[] gpa = new double[5];   
         
 //        Calculate GPA members of 5
+        if(matricInput.getText().isEmpty()|| c1CarryMark.getText().isEmpty()|| c2CarryMark.getText().isEmpty()|| c3CarryMark.getText().isEmpty() || c4CarryMark.getText().isEmpty() || c5CarryMark.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Some data not key in yet!");
+        }else{
         gpa[0] = Integer.parseInt(c1CarryMark.getText()) + Integer.parseInt(c1FinalMark.getText());
         gpa[1] = Integer.parseInt(c2CarryMark.getText()) + Integer.parseInt(c2FinalMark.getText());
         gpa[2] = Integer.parseInt(c3CarryMark.getText()) + Integer.parseInt(c3FinalMark.getText());
@@ -607,11 +610,7 @@ public class Grading extends javax.swing.JFrame {
         String data[] = {matricInput.getText(),butClass ,Double.toString(gpa[0]), Double.toString(gpa[1]), Double.toString(gpa[2]), Double.toString(gpa[3]), Double.toString(gpa[4]), Double.toString(cgpa) };
         DefaultTableModel tblModel = (DefaultTableModel)displayTable.getModel();
         
-//        insertion of data
-        if(matricInput.getText().isEmpty()|| c1CarryMark.getText().isEmpty()|| c2CarryMark.getText().isEmpty()|| c3CarryMark.getText().isEmpty() || c4CarryMark.getText().isEmpty() || c5CarryMark.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Some data not key in yet!");
-        }else{
-           
+//        insertion of data           
             tblModel.addRow(data);
         }      
        
