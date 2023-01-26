@@ -9,18 +9,23 @@ import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 /**
  *
  * @author amirul
  */
 public class Grading extends javax.swing.JFrame {
-
+    
+    private static final DecimalFormat df = new DecimalFormat("0.00");
+    
     /**
      * Creates new form AddStudent
      */
     public Grading() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     
     public String languageRun(){
@@ -89,6 +94,7 @@ public class Grading extends javax.swing.JFrame {
         infoLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("gradingFrame");
         setBackground(new java.awt.Color(51, 51, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setSize(new java.awt.Dimension(64, 23));
@@ -627,8 +633,9 @@ public class Grading extends javax.swing.JFrame {
             butClass = "CS2663C";
         }else{ butClass = "CS2663D";}
         
+        df.setRoundingMode(RoundingMode.UP);
 //        data object untuk table
-        String data[] = {matricInput.getText(),butClass ,Double.toString(gpa[0]), Double.toString(gpa[1]), Double.toString(gpa[2]), Double.toString(gpa[3]), Double.toString(gpa[4]), Double.toString(cgpa) };
+        String data[] = {matricInput.getText(),butClass ,Double.toString(gpa[0]), Double.toString(gpa[1]), Double.toString(gpa[2]), Double.toString(gpa[3]), Double.toString(gpa[4]), df.format(cgpa) };
         DefaultTableModel tblModel = (DefaultTableModel)displayTable.getModel();
         
         if(languageRun().equals("English")){
@@ -639,8 +646,6 @@ public class Grading extends javax.swing.JFrame {
 //        insertion of data           
             tblModel.addRow(data);
         }      
-       
-        
                 
     }//GEN-LAST:event_addDataBtnActionPerformed
 
@@ -772,10 +777,13 @@ public class Grading extends javax.swing.JFrame {
             themeModeBtn.setBackground(color);
             themeModeBtn.setForeground(Color.white);          
             sgrHeader.setBackground(new Color(32,33,36));
-            
+            languageCb.setBackground(color);
+            languageCb.setForeground(Color.white);      
             matricsTxt.setForeground(Color.WHITE);
             matricInput.setBackground(color);
             matricInput.setForeground(Color.white);
+            
+            infoLbl.setForeground(Color.white);
             
             markPanel.setBackground(color);
             markPanel.setForeground(Color.white);
@@ -841,6 +849,9 @@ public class Grading extends javax.swing.JFrame {
             themeModeBtn.setForeground(Color.black);
              sgrHeader.setBackground(new Color(76,79,245));
              
+             infoLbl.setForeground(Color.black);
+            languageCb.setBackground(Color.white);
+            languageCb.setForeground(Color.black);    
             matricsTxt.setForeground(Color.black);
             matricInput.setBackground(Color.white);
             matricInput.setForeground(Color.black);
